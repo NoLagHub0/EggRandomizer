@@ -1,5 +1,3 @@
--- LocalScript inside StarterPlayerScripts or StarterGui
-
 local players = game:GetService("Players")
 local collectionService = game:GetService("CollectionService")
 local localPlayer = players.LocalPlayer or players:GetPlayers()[1]
@@ -18,7 +16,8 @@ local eggChances = {
     ["Rare Summer Egg"] = {["Flamingo"] = 30, ["Toucan"] = 25, ["Sea Turtle"] = 20, ["Orangutan"] = 15, ["Seal"] = 10},
     ["Paradise Egg"] = {["Ostrich"] = 43, ["Peacock"] = 33, ["Capybara"] = 24, ["Scarlet Macaw"] = 3, ["Mimic Octopus"] = 1},
     ["Premium Night Egg"] = {["Hedgehog"] = 50, ["Mole"] = 26, ["Frog"] = 14, ["Echo Frog"] = 10},
-    ["Dinosaur Egg"] = {["Raptor"] = 33, ["Triceratops"] = 33, ["T-Rex"] = 1, ["Stegosaurus"] = 33, ["Pterodactyl"] = 33, ["Brontosaurus"] = 33}
+    ["Dinosaur Egg"] = {["Raptor"] = 33, ["Triceratops"] = 33, ["T-Rex"] = 1, ["Stegosaurus"] = 33, ["Pterodactyl"] = 33, ["Brontosaurus"] = 33},
+    ["Primal Egg"] = {["Parasaurolophus"] = 33, ["Iguanodon"] = 33, ["Spinosaurus"] = 1, ["Ankylosaurus"] = 33, ["Dilophosaurus"] = 33}
 }
 
 local realESP = {
@@ -153,7 +152,7 @@ info.MouseButton1Click:Connect(function()
     pcall(function()
         game:GetService("StarterGui"):SetCore("SendNotification", {
             Title = "Info",
-            Text = "Auto Stop when found: Raccoon, Dragonfly, Queen Bee, Red Fox, Disco Bee, Butterfly.",
+            Text = "Auto Stop when found: Raccoon, Dragonfly, Queen Bee, Red Fox, Disco Bee, Butterfly, Spinosaurus.",
             Duration = 5
         })
     end)
@@ -176,3 +175,4 @@ autoBtn.MouseButton1Click:Connect(function()
         end
     end
 end)
+
